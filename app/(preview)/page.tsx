@@ -40,7 +40,7 @@ export default function ChatWithFiles() {
     schema: questionsSchema,
     initialValue: undefined,
     onError: (error) => {
-      toast.error("Failed to generate quiz. Please try again.");
+      toast.error("Failed to generate medical test questions. Please try again.");
       setFiles([]);
     },
     onFinish: ({ object }) => {
@@ -65,7 +65,7 @@ export default function ChatWithFiles() {
     console.log(validFiles);
 
     if (validFiles.length !== selectedFiles.length) {
-      toast.error("Only PDF files under 5MB are allowed.");
+      toast.error("Only medical PDF files under 5MB are allowed.");
     }
 
     setFiles(validFiles);
@@ -152,12 +152,17 @@ export default function ChatWithFiles() {
               <Loader2 className="h-6 w-6" />
             </div>
           </div>
-          <div className="space-y-2">
-            <CardTitle className="text-2xl font-bold">
-              PDF Quiz Generator
+          <div className="space-y-3">
+            <div className="text-center mb-2">
+              <div className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                AI Medica Lab
+              </div>
+            </div>
+            <CardTitle className="text-2xl font-bold text-center">
+              Generator of 20 medical test questions from PDF file
             </CardTitle>
             <CardDescription className="text-base">
-              Upload a PDF to generate an interactive quiz based on its content
+              Upload a medical PDF document to generate 20 interactive medical test questions based on its content
               using the <Link href="https://sdk.vercel.ai">AI SDK</Link> and{" "}
               <Link href="https://sdk.vercel.ai/providers/ai-sdk-providers/google-generative-ai">
                 Google&apos;s Gemini Pro
@@ -184,7 +189,7 @@ export default function ChatWithFiles() {
                     {files[0].name}
                   </span>
                 ) : (
-                  <span>Drop your PDF here or click to browse.</span>
+                  <span>Drop your medical PDF here or click to browse.</span>
                 )}
               </p>
             </div>
@@ -196,10 +201,10 @@ export default function ChatWithFiles() {
               {isLoading ? (
                 <span className="flex items-center space-x-2">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Generating Quiz...</span>
+                  <span>Generating Medical Test Questions...</span>
                 </span>
               ) : (
-                "Generate Quiz"
+                "Generate Medical Test Questions"
               )}
             </Button>
           </form>
@@ -222,8 +227,8 @@ export default function ChatWithFiles() {
                 />
                 <span className="text-muted-foreground text-center col-span-4 sm:col-span-2">
                   {partialQuestions
-                    ? `Generating question ${partialQuestions.length + 1} of 20`
-                    : "Analyzing PDF content"}
+                    ? `Generating medical question ${partialQuestions.length + 1} of 20`
+                    : "Analyzing medical PDF content"}
                 </span>
               </div>
             </div>
