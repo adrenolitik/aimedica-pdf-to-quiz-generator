@@ -7,9 +7,9 @@ import { Geist } from "next/font/google";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-sdk-preview-pdf-support.vercel.app"),
-  title: "PDF Support Preview",
-  description: "Experimental preview of PDF support with the AI SDK",
+  metadataBase: new URL("https://aimedica-pdf-to-quiz-generator-9z6b-1e94h7red.vercel.app"),
+  title: "AI Medica Lab - Medical Test Generator",
+  description: "Generate 20 medical test questions from PDF files using AI - AI Medica Lab",
 };
 
 export default function RootLayout({

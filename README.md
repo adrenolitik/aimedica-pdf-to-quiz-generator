@@ -1,34 +1,73 @@
-# AI SDK PDF Support Example
+# 🏥 AI Medica Lab - Medical Test Generator
 
-This example demonstrates how to use the [AI SDK](https://sdk.vercel.ai/docs) with [Next.js](https://nextjs.org/) with the `useObject` hook to submit PDF messages to the AI provider of your choice (Google or Anthropic).
+**AI Medica Lab** предоставляет интеллектуальный генератор медицинских тестов из PDF-документов. Приложение использует искусственный интеллект Google Gemini для создания 20 медицинских вопросов на основе загруженных медицинских документов.
 
-## Deploy your own
+🌐 **Живое демо**: https://aimedica-pdf-to-quiz-generator-9z6b-1e94h7red.vercel.app/
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-pdf-support&env=GOOGLE_API_KEY&envDescription=API%20keys%20needed%20for%20application&envLink=google.com)
+## ✨ Возможности
 
-## How to use
+- 📄 Загрузка медицинских PDF-файлов (до 5MB)
+- 🤖 Генерация 20 медицинских вопросов с помощью ИИ
+- 🎯 Фокус на медицинской терминологии и концепциях
+- 📱 Адаптивный интерфейс для всех устройств
+- ⚡ Быстрая генерация с прогресс-баром
+- 📊 Интерактивное тестирование с результатами
 
-Run [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## 🚀 Автоматическое развертывание
+
+### Deploy on Vercel (Рекомендуется)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fadrenolitik%2Faimedica-pdf-to-quiz-generator&env=GOOGLE_API_KEY&envDescription=Google%20API%20key%20for%20Gemini%20AI&envLink=https://aistudio.google.com/app/apikey)
+
+### Настройка GitHub для автоматического деплоя:
+
+1. **Fork** этот репозиторий
+2. Перейдите в **Settings** → **Secrets and variables** → **Actions**
+3. Добавьте следующие секреты:
+   ```
+   GOOGLE_API_KEY=your_google_api_key
+   VERCEL_TOKEN=your_vercel_token
+   ORG_ID=your_vercel_org_id
+   PROJECT_ID=your_vercel_project_id
+   ```
+4. Каждый push в ветку `main` автоматически развернет приложение
+
+## 🔧 Локальная разработка
+
+### Требования
+- Node.js 18+
+- npm или yarn
+- Google API Key (Gemini)
+
+### Установка
 
 ```bash
-npx create-next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
+git clone https://github.com/adrenolitik/aimedica-pdf-to-quiz-generator.git
+cd aimedica-pdf-to-quiz-generator
+npm install
 ```
+
+### Настройка окружения
+
+Создайте файл `.env.local`:
+```bash
+GOOGLE_API_KEY=your_google_api_key_here
+```
+
+Получить API ключ: [Google AI Studio](https://aistudio.google.com/app/apikey)
+
+### Запуск
 
 ```bash
-yarn create next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
+# Разработка
+npm run dev
+
+# Продакшн сборка
+npm run build
+npm start
 ```
 
-```bash
-pnpm create next-app --example https://github.com/vercel-labs/ai-sdk-preview-pdf-support ai-sdk-preview-pdf-support-example
-```
-
-To run the example locally you need to:
-
-1. Sign up for accounts with the AI providers you want to use (e.g., Google).
-2. Obtain API keys for Google provider.
-3. Set the required environment variables as shown in the `.env.example` file, but in a new file called `.env`.
-4. `npm install` to install the required dependencies.
-5. `npm run dev` to launch the development server.
+Приложение будет доступно по адресу: `http://localhost:3000`
 
 
 ## Learn More

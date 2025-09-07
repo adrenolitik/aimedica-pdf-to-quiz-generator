@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/generate-quiz/route.ts": {
+      "maxDuration": 60
+    }
+  },
+  "env": {
+    "GOOGLE_API_KEY": "@google-api-key"
+  }
+}

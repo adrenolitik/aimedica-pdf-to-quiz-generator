@@ -1,6 +1,12 @@
 {
-  "name": "three-three-blog",
-  "version": "0.1.0",
+  "name": "aimedica-pdf-to-quiz-generator",
+  "version": "1.0.0",
+  "description": "AI Medica Lab - Generate 20 medical test questions from PDF files using AI",
+  "homepage": "https://aimedica-pdf-to-quiz-generator-9z6b-1e94h7red.vercel.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrenolitik/aimedica-pdf-to-quiz-generator.git"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,6 +32,7 @@
     "lucide-react": "^0.468.0",
     "next": "15.1.0",
     "next-themes": "^0.4.4",
+    "pm2": "^6.0.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^9.0.1",

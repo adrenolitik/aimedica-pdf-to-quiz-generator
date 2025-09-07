@@ -198,13 +198,13 @@ export default function Quiz({
                         variant="outline"
                         className="bg-muted hover:bg-muted/80 w-full"
                       >
-                        <RefreshCw className="mr-2 h-4 w-4" /> Reset Quiz
+                        <RefreshCw className="mr-2 h-4 w-4" /> Reset Medical Test
                       </Button>
                       <Button
                         onClick={clearPDF}
                         className="bg-primary hover:bg-primary/90 w-full"
                       >
-                        <FileText className="mr-2 h-4 w-4" /> Try Another PDF
+                        <FileText className="mr-2 h-4 w-4" /> Try Another Medical PDF
                       </Button>
                     </div>
                   </div>

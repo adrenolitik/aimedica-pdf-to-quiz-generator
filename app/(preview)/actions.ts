@@ -11,11 +11,11 @@ export const generateQuizTitle = async (file: string) => {
       title: z
         .string()
         .describe(
-          "A max three word title for the quiz based on the file provided as context",
+          "A max four word title for the medical test based on the file provided as context",
         ),
     }),
     prompt:
-      "Generate a title for a quiz based on the following (PDF) file name. Try and extract as much info from the file name as possible. If the file name is just numbers or incoherent, just return quiz.\n\n " + file,
+      "Generate a title for a medical test based on the following medical PDF file name. Try and extract as much medical info from the file name as possible. Focus on medical topics, conditions, or specialties. If the file name is just numbers or incoherent, return 'Medical Test'.\n\n " + file,
   });
   return result.object.title;
 };

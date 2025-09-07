@@ -14,14 +14,14 @@ export async function POST(req: Request) {
       {
         role: "system",
         content:
-          "You are a teacher. Your job is to take a document, and create a multiple choice test (with 20 questions) based on the content of the document. Each option should be roughly equal in length.",
+          "You are a medical educator. Your job is to take a medical document, and create a medical multiple choice test (with 20 questions) based on the content of the document. Focus on medical concepts, terminology, procedures, diagnoses, treatments, and clinical knowledge. Each option should be roughly equal in length and medically accurate.",
       },
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: "Create a multiple choice test based on this document.",
+            text: "Create a medical multiple choice test with 20 questions based on this medical document. Focus on important medical concepts, procedures, terminology, and clinical knowledge presented in the document.",
           },
           {
             type: "file",
